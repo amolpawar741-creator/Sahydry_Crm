@@ -50,8 +50,12 @@ using (var scope = app.Services.CreateScope())          // seed first admin
 
 if (app.Environment.IsDevelopment()) { app.UseSwagger(); app.UseSwaggerUI(); }
 app.UseHttpsRedirection();
+app.UseDefaultFiles(); // Serves index.html by default
+app.UseStaticFiles();
 app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.MapFallbackToFile("index.html");
+
 app.Run();
