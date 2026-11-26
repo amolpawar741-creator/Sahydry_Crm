@@ -48,7 +48,9 @@ using (var scope = app.Services.CreateScope())          // seed first admin
     }
 }
 
-if (app.Environment.IsDevelopment()) { app.UseSwagger(); app.UseSwaggerUI(); }
+//if (app.Environment.IsDevelopment()) { 
+    app.UseSwagger(); app.UseSwaggerUI(); 
+//}
 app.UseHttpsRedirection();
 app.UseDefaultFiles(); // Serves index.html by default
 app.UseStaticFiles();
