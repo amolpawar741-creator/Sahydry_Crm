@@ -54,7 +54,7 @@ using (var scope = app.Services.CreateScope())          // seed first admin
         c.RoutePrefix = "swagger";
     }); 
 //}
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseDefaultFiles(); // Serves index.html by default
 app.UseStaticFiles();
 app.UseCors();
