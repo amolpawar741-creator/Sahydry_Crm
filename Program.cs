@@ -49,7 +49,10 @@ using (var scope = app.Services.CreateScope())          // seed first admin
 }
 
 //if (app.Environment.IsDevelopment()) { 
-    app.UseSwagger(); app.UseSwaggerUI(); 
+    app.UseSwagger(); app.UseSwaggerUI(c =>
+    {       
+        c.RoutePrefix = "swagger";
+    }); 
 //}
 app.UseHttpsRedirection();
 app.UseDefaultFiles(); // Serves index.html by default
